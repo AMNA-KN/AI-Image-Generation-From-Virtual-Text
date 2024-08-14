@@ -57,4 +57,4 @@ This project is licensed under the MIT License. See the LICENCE file for details
 
 ## 💬 Feedback
 
-Your Feedback is essential to enhance our 'AI Image Generation From Virtual Text' project. We welcome your thoughts, suggestions, and any issues you encounter during the virtual text to image generation process. ```^_^```
+Your Feedback is essential to enhance our 'AI Image Generation From Virtual Text' project. We welcome your thoughts, suggestions, and any issues you encounter during the virtual text to image generation process. ```^_^```         

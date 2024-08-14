@@ -10,18 +10,15 @@ from PIL import Image
 import base64
 import api_key
 
-
 ## to list img frm HEADER ##
 folderpath = 'HEADER'
 lst = os.listdir(folderpath)
 #print(lst)
-
 overlaylist = []
 for i in lst:
     image = cv2.imread(f'{folderpath}/{i}')
     overlaylist.append(image)
 #print(len(overlaylist))    
-
 header = overlaylist[0]
 
 ##################################
@@ -98,7 +95,6 @@ while True:
     img = cv2.bitwise_and(img, imginv)
     img = cv2.bitwise_or(img, imgcanvas)
 
-
     ## setting the header image ##
     img[0:125, 0:1280] = header
     cv2.imshow("IMAGE", img)
@@ -109,7 +105,6 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-
 ## to save image ##
 cv2.imwrite('D:\DL PROJECT\MEDIAPIPE_PROJECT\OUTPUT\output_demo.jpg', imginv)
 
@@ -119,11 +114,9 @@ img_text = cv2.imread(r'D:\DL PROJECT\MEDIAPIPE_PROJECT\OUTPUT\output_demo.jpg')
 ## to extract text from image ##
 pytesseract.pytesseract.tesseract_cmd = r"c:\Program Files\Tesseract-OCR\tesseract.exe"
 text = pytesseract.image_to_string(img_text)
-
 print(text)
 
 ## to generate ai image ##
-
 API_URL = "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image"
 
 headers = {"Authorization": f"Bearer {api_key.HF_API_KEY}"}
@@ -136,7 +129,5 @@ image_bytes = query({"inputs": f"3D realistic {text} with cinematic background",
 
 # You can access the image with PIL.Image for example
 image_data = base64.b64decode(image_bytes)
-
 image = Image.open(io.BytesIO(image_bytes))
 image.show() 
-

@@ -44,7 +44,7 @@ The *'AI Image Generation From Virtual Text'* is an innovative project that harn
 
 Check out the demo video to see the Image Generation From Virtual Text in action:
 
-[Watch the Demo on LinkedIn]()
+[Watch the Demo on LinkedIn](https://www.linkedin.com/posts/amna-k-n-a27321269_presenting-ai-text-to-image-transformation-activity-7229836829246545920-fSPU?utm_source=share&utm_medium=member_android)
 
 ## 📔 Lessons Learned
 
